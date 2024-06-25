@@ -1,0 +1,108 @@
+.DetalleResta{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.Local{
+    border: 1px solid #cacaca;
+    width: 250px;
+}
+.ImgLocal{
+    width: 250px;
+    height: 130px;
+}
+.ImgLogoLocal{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 180px;
+    left: 20px;
+}
+.HNombreLocal{
+    color: rgb(54, 52, 52);
+    margin-top: 35px;
+    margin-left: 15px;
+}
+
+.SpanDireccionLocal{
+    margin-left: 15px;
+    font-size: small;
+}
+.DetalleEnvio{
+    border: 1px solid rgb(177, 176, 176);
+    margin: 10px;
+    border-radius: 10px;
+}
+.DetalleEnvioTiempo{
+    padding-left: 0 !important ;
+    margin-top: 10px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(177, 176, 176);
+}
+.DetalleEnvioTiempoNombre{
+    font-size: medium;
+    margin-left: 10px;
+    font-weight: 700;
+}
+.DetalleEnvioTiempoNumero{
+    font-size: medium;
+    margin-left: 90px;
+    margin-right: auto;
+}
+.DetalleEnvioEnvioNumero{
+    font-size: medium;
+    margin-left: 110px;
+    margin-right: auto;
+}
+/*-----------------*/
+.ListaPlatos{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.PlatoCard{
+    border-bottom: 1px solid rgb(141, 140, 140);
+    margin: 10px;
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+}
+.HNombrePlato{
+    margin: 0px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+.PNombrePlato{
+    margin: 0px;
+}
+.ImgPlato{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    float: right;
+}
+.HDesPlato{
+    text-align: left;
+    float: left;
+    margin: 10px 100px 10px 0px;
+    font-size: small;
+}
+.DetallePlato{
+    margin: 0px;
+}
+.PPresPlato{
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.PPrecPlato{
+    margin-bottom: 0px;
+
+}
+.DetalleHorario{
+    margin-left: 70px;
+}
+.DetalleNumero{
+    margin-left: 55px;
+}
+.DivImgPlato{
+    margin-bottom: 0px;
+}

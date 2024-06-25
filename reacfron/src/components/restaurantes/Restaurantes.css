@@ -1,0 +1,72 @@
+
+.ListCard{
+    display: grid;
+    align-content: start;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    padding: 10px;
+}
+.Card{
+    /* border: 5px solid black; */
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.PortadaImg{
+    border-radius: 10px;
+    width: 295px;
+    height: 160px;
+}
+.ImgLogo{
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    border-radius: 50%;
+    margin:  5px 5px 5px 0px;
+}
+.NombrePlato{
+    display: flex;
+    text-align: left;
+    justify-content: start;
+}
+ .NombreRest{
+    text-align: left;
+    vertical-align: text-top;
+    margin: 0px 20px 0px 5px;
+}
+.NombresLR{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.NombrePlato{
+    margin-left: 5px;
+}
+/*
+.Nombre{
+    margin: 0px;
+}
+.Card-Icon-Clock, .Card-Tiempo ,.Card-Icon-Moto,.Card-Monto{
+    margin: 0px 5px 0px 5px;
+} */
+.Calificacion{
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-left: auto;
+    
+}
+.ClsSpna{
+    background-color: rgb(255, 241, 214);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0px;
+}
+.Card-Icon-Star{
+    color: rgb(255, 255, 10);
+} 
+.Card-Calificación{
+    margin-left: 5px;
+}
+.LinkRest{
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+}
