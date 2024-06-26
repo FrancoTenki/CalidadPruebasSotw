@@ -1,0 +1,123 @@
+/* Ajustes generales para el formulario */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+/* Estilos para las etiquetas */
+.custom-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilos para los campos de entrada */
+.custom-input,
+.custom-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.custom-input:focus,
+.custom-select:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+}
+
+/* Estilos para el botón */
+.custom-button {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/*  */
+/* Ajustes generales para la barra de navegación */
+#Navbar {
+    background-color: #f8f9fa; /* Color de fondo */
+    padding: 10px 20px; /* Espaciado interno */
+}
+
+/* Estilos para el enlace de la marca */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007BFF; /* Color del enlace */
+    text-decoration: none;
+}
+
+/* Estilos para los elementos de la navegación */
+.nav-link {
+    color: #343a40; /* Color de los enlaces */
+    margin-right: 10px; /* Espaciado entre enlaces */
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007BFF; /* Color del enlace activo */
+}
+
+/* Estilos para el formulario de búsqueda */
+.form-control {
+    margin-right: 5px; /* Espaciado entre la entrada y el botón */
+}
+
+.btn-outline-success {
+    color: #28a745; /* Color del texto del botón */
+    border-color: #28a745; /* Color del borde del botón */
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745; /* Color de fondo al pasar el ratón */
+    color: #fff; /* Color del texto al pasar el ratón */
+}
+
+/* Estilos para los botones de Login y Register */
+#bnt-Login, #bnt-Register {
+    color: #343a40; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+#bnt-Login:hover, #bnt-Register:hover {
+    color: #007BFF; /* Color del texto al pasar el ratón */
+}
+
+/* Estilos para el icono del carrito de compras */
+.fa-cart-shopping {
+    color: #343a40; /* Color del icono */
+}
+
+.fa-cart-shopping:hover {
+    color: #007BFF; /* Color del icono al pasar el ratón */
+}
+
+/* Ajustes para la vista móvil */
+@media (max-width: 768px) {
+    .navbar-text {
+        margin-bottom: 10px; /* Espaciado en la vista móvil */
+    }
+}

@@ -10,7 +10,6 @@ import ComMostrarplatos from './components/Platos/ComMostrarplatos';
 import ComCreatePlato from './components/Platos/ComCreatePlato';
 import MostrarALLplatos from './components/Platos/MostrarPlatos';
 import ComEditPlato from './components/Platos/ComEditPlato';
-import Login from './components/navbar/Login';
 import LoginPrueba from './components/navbar/LoginPrueba';
 import ComCrearUsuario from './components/navbar/ComCrearUsuario';
 import { ComCarrito } from './components/carrito/ComCarrito';
@@ -37,7 +36,6 @@ function App() {
           <Route path='/Restaurante/platos/:id' element={<MostrarALLplatos/>}></Route>
           {/* Login */}
           <Route path='/Login' element={<LoginPrueba/>}></Route>
-          <Route path='/Login2' element={<Login/>}></Route>
           {/* Creacion de un nuevo usuario */}
           <Route path='/CrearUsuario' element={<ComCrearUsuario/>}></Route>
           {/* Pagina de proveedor */}

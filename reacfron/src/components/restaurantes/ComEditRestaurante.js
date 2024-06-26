@@ -26,7 +26,7 @@ const ComEditRestaurante = () => {
         await axios.put(URI+id,{
             ImgPortada:ImgPortada,ImgLogo:ImgLogo,Nombre:Nombre,Direccion:Direccion,TimEnvio:TimEnvio,PrecEnvio:PrecEnvio,Calificacion:Calificacion,HorApertura:HorApertura,HorCerrar:HorCerrar,Ruc:Ruc,RazonSocial:RazonSocial
         })
-        navigete('/restauranteUser')
+        navigete('/Login')
     }
 
     useEffect(()=>{

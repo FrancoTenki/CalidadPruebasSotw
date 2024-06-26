@@ -2,7 +2,7 @@ import axios from "axios";
 import {useEffect, useState} from "react";
 import React from 'react';
 import { PageMainProveedor } from "../Proveedor/PageMainProveedor.js";
-
+import './login.css'
 const URI='http://localhost:8000/Login/'
 const URIActCarritoPlt='http://localhost:8000/Carrito/ActuCarrPlt'
 
@@ -74,10 +74,6 @@ const LoginPrueba = () => {
                 </form> 
             </div>
         }</>
-        
-         
-
-
     );
 }
 

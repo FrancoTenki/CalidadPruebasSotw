@@ -40,10 +40,10 @@ const ComRestaurante = () => {
                     <img src={restaurante.ImgPortada} className="img-fluid rounded-start" />
                     </div>
                     <div className="col-md-8">
-                    <div className="card-body">
-                        <h5 id='nombreRest' className="card-title">{restaurante.Nombre}</h5>
-                        <p id='direccionRest' className="card-text">{restaurante.Direccion}</p>
-                        <p id='RazonSocialRest' className="card-text">{restaurante.RazonSocial}</p>
+                    <div className="card-body" id='Card_Rest_Admin'>
+                        <h5 id='NombreRest_Admin' className="card-title">{restaurante.Nombre}</h5>
+                        <p id='DireccionRest_Admin' className="card-text">{restaurante.Direccion}</p>
+                        <p id='RazonSocialRest_Admin' className="card-text">{restaurante.RazonSocial}</p>
                         <Link to={`/restaurante/edit/${restaurante.id}`} className='btn btn-primary' id='Link_Editar_Restaurante' >Editar</Link>
                         
                         <button onClick={()=>deleteRestaurante(restaurante.id)} className='btn btn-primary' id='Btn_Eliminar_Restaurante'>Elimnar</button>

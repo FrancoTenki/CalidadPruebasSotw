@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import './PlatoDetalle.css'
 import axios from'axios'
+import './platoDetallesConsum.css'
 
 const URICarrito='http://localhost:8000/Carrito/'
 const URI='http://localhost:8000/platos/'
@@ -66,7 +66,7 @@ export const ComMostarPlaConIdRes_Cons = ({Id_Restaurante}) => {
                         ></img>
                     </div>
                     {localStorage.getItem('token')===null?(<p>Inicie secion para agregar al carrito</p>):
-                    plato.InCart ===0 ?(<button onClick={()=>AgregarAlCarrito(plato)}>Agregar Al Carrito</button>)
+                    plato.InCart ===0 ?(<button onClick={()=>AgregarAlCarrito(plato)} class='btn btn-primary'>Agregar Al Carrito</button>)
                     :(<p>En el carrito</p>)}
                 </div>)
         })}

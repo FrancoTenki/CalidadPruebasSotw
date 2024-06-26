@@ -32,15 +32,15 @@ const ComCrearRestaurante = () => {
             </div>
             <div className="mb-3">
                 <label className="form-label">Nombre del plato</label>
-                <input value={Nombre} onChange={(e)=>setNombre(e.target.value)}  type="text" className="form-control"id="Input_Crear_Plato_Nombre"/>
+                <input required value={Nombre} onChange={(e)=>setNombre(e.target.value)}  type="text" className="form-control"id="Input_Crear_Plato_Nombre"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Descripcion de plato</label>
-                <textarea value={Descrp} onChange={(e)=>setDescrp(e.target.value)} type="text" className="form-control" id="Input_Crear_Plato_Descrip"/>
+                <textarea required value={Descrp} onChange={(e)=>setDescrp(e.target.value)} type="text" className="form-control" id="Input_Crear_Plato_Descrip"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Precio de plato</label>
-                <input value={Precio}onChange={(e)=>setPrecio(e.target.value)} type="text" className="form-control" id="Input_Crear_Plato_Precio"/>
+                <input required value={Precio}onChange={(e)=>setPrecio(e.target.value)} type="text" className="form-control" id="Input_Crear_Plato_Precio"/>
             </div>
             
             <button type="submit" className="btn btn-primary" id="Btn_Crear_Plato">Crear</button>

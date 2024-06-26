@@ -3,8 +3,16 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import React from 'react';
 const URI='http://localhost:8000/restaurantes/'
-
-const ComCrearRestaurante = ({onRestauranteCreated }) => {
+function parseJwt (token) {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+  
+    return JSON.parse(jsonPayload);
+}
+const ComCrearRestaurante = () => {
 
     const [ImgPortada,setImgPortada]=useState('')
     const [ImgLogo,setImgLogo]=useState('')
@@ -22,11 +30,12 @@ const ComCrearRestaurante = ({onRestauranteCreated }) => {
 
     const store=async(e)=>{
         e.preventDefault()
-        await axios.post(URI,{ImgPortada:ImgPortada,ImgLogo:ImgLogo
+        const res =await axios.post(URI,{ImgPortada:ImgPortada,ImgLogo:ImgLogo
             ,Nombre:Nombre,Direccion:Direccion,TimEnvio:TimEnvio
             ,PrecEnvio:PrecEnvio,Calificacion:Calificacion,HorApertura:HorApertura
-            ,HorCerrar:HorCerrar,Ruc:Ruc,RazonSocial:RazonSocial})
-        navigete('/restauranteUser')
+            ,HorCerrar:HorCerrar,Ruc:Ruc,RazonSocial:RazonSocial,Id_User:parseJwt(localStorage.getItem('token')).id})
+        console.log(res.data)
+        navigete('/Login')
         
     }
   return (
@@ -43,11 +52,11 @@ const ComCrearRestaurante = ({onRestauranteCreated }) => {
             </div>
             <div className="mb-3">
                 <label className="form-label">Nombre de restaurante</label>
-                <input id="InputNombre" value={Nombre}  onChange={(e)=>setNombre(e.target.value)}  type="text" className="form-control"/>
+                <input required id="InputNombre" value={Nombre}  onChange={(e)=>setNombre(e.target.value)}  type="text" className="form-control"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Direccion de restaurante</label>
-                <input id="InputDireccion" value={Direccion}  onChange={(e)=>setDireccion(e.target.value)}  type="text" className="form-control"/>
+                <input required id="InputDireccion" value={Direccion}  onChange={(e)=>setDireccion(e.target.value)}  type="text" className="form-control"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Tiempo de envio del restaurante</label>
@@ -73,11 +82,11 @@ const ComCrearRestaurante = ({onRestauranteCreated }) => {
             </div>
             <div className="mb-3">
                 <label className="form-label">Ruc</label>
-                <input id="InputRuc" value={Ruc} onChange={(e)=>setRuc(e.target.value)} type="text" className="form-control"/>
+                <input required id="InputRuc" value={Ruc} onChange={(e)=>setRuc(e.target.value)} type="text" className="form-control"/>
             </div>
             <div className="mb-3">
                 <label className="form-label">Razon Social </label>
-                <input id="InputRazonSocial" value={RazonSocial} onChange={(e)=>setRazonSocial(e.target.value)} type="text" className="form-control"/>
+                <input required id="InputRazonSocial" value={RazonSocial} onChange={(e)=>setRazonSocial(e.target.value)} type="text" className="form-control"/>
             </div>
             <button type="submit" className="btn btn-primary" id="btn-store">Crear</button>
         </form>

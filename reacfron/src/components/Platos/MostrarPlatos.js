@@ -21,22 +21,21 @@ const MostrarALLplatos = () => {
             console.log("error",error)
         }
     }
-    
+    const formatTime = (timeString) => {
+        let date = new Date(`1970-01-01T${timeString}Z`);
+        let hours = date.getHours().toString().padStart(2, '0');
+        let minutes = date.getMinutes().toString().padStart(2, '0');
+        return `${hours}:${minutes}`;
+    };
 
   return (
     <div className='DetalleResta'>
+        
+
         <div className='Local'>
-
-            <img className='ImgLocal'
-                src={restaurante.ImgPortada}
-            />
-
-            <img className='ImgLogoLocal'
-                src={restaurante.ImgLogo}
-            />
-
+            <img className='ImgLocal'src={restaurante.ImgPortada}/>
+            <img className='ImgLogoLocal'src={restaurante.ImgLogo}/>
             <h2 id='H2_Nombre_Restaurante_Detalle' className='HNombreLocal'>{restaurante.Nombre}</h2>
-
             <h3 id='H3_Direccion_Restaurante_Detalle' className='SpanDireccionLocal'>{restaurante.Direccion}</h3>
 
             <div className='DetalleEnvio'>
@@ -52,13 +51,9 @@ const MostrarALLplatos = () => {
                     <span className='DetalleEnvioTiempoNombre'>Calificacion</span>
                     <span id='Calififcacion_Restaurante_Detalle' className='DetalleEnvioTiempoNumero'>{restaurante.Calificacion}</span>
                 </div>
-                {/* <div className='DetalleEnvioTiempo'>
-                    <span className='DetalleEnvioTiempoNombre'>Numero</span>
-                    <span className='DetalleNumero'>923 312 213</span>
-                </div> */}
                 <div className='DetalleEnvioTiempo'>
                     <span className='DetalleEnvioTiempoNombre'>Horario</span>
-                    <span id='Horario_Restaurante_Detalle' className='DetalleHorario'>{restaurante.HorApertura}-{restaurante.HorCerrar}</span>
+                    <span id='Horario_Restaurante_Detalle' className='DetalleHorario'>{formatTime(restaurante.HorApertura)} - {formatTime(restaurante.HorCerrar)}</span>
                 </div>
             </div>
         </div>

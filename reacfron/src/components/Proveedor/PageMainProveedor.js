@@ -25,8 +25,8 @@ export const PageMainProveedor = () => {
   },[])
   const LogOut=async ()=>{
     if((localStorage.getItem('token'))!==null){
-      localStorage.removeItem('token');
       const res=await axios.post(`${URIActCarritoPlt}`,{idUser:parseJwt(localStorage.getItem('token')).id})
+      localStorage.removeItem('token');
       console.log(res.data)
       navigete('/restaurante')
     }
@@ -34,7 +34,7 @@ export const PageMainProveedor = () => {
   const GetHistorial=async ()=>{
     if((localStorage.getItem('token'))!==null){
       const res=await axios.post(`${URIHistorial}`,{idUser:parseJwt(localStorage.getItem('token')).id})
-      console.log(historial)
+      console.log(res.data)
       setHistorial(res.data)
     }
   }
